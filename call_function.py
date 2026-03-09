@@ -24,6 +24,7 @@ def call_function(function_call, verbose=False):
         "write_file_content": write_file_content.write_file_content,
     }
     function_name = function_call.name or ""
+    print(f"- Calling function: {function_name}")
     if function_name not in function_map:
         return types.Content(
             role="tool",
